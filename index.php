@@ -22,13 +22,16 @@ $api_url = $is_production ?
 // $request_body = file_get_contents('php://input');
 
 $transaction_details = array(
-    'gross_amount' => 1000,
-    'order_id' => 222,
+    'transaction_details' => array(
+      'gross_amount' => 1000,
+      'order_id' => 222,
+    )
+    
 )
 
-$request_body = json_encode($transaction_details);
+// $request_body = json_encode($transaction_details);
 
-echo $request_body; exit();
+echo $transaction_details; exit();
 
 header('Content-Type: application/json');
 
