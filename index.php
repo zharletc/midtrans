@@ -26,7 +26,7 @@ $transaction_details = array(
     'order_id' => 222,
 )
 
-$request_body = json_encode($order_detail);
+$request_body = json_encode($transaction_details);
 
 header('Content-Type: application/json');
 
