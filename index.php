@@ -28,6 +28,8 @@ $transaction_details = array(
 
 $request_body = json_encode($transaction_details);
 
+echo $request_body; exit();
+
 header('Content-Type: application/json');
 
 $charge_result = chargeAPI($api_url, $server_key, $request_body);
