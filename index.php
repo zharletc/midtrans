@@ -19,7 +19,17 @@ $api_url = $is_production ?
 //   echo "Page not found or wrong HTTP request method is used"; exit();
 // }
 
-$request_body = file_get_contents('php://input');
+// $request_body = file_get_contents('php://input');
+
+$order_detail = array(
+  'transaction_details' => [
+    'gross_amount' => 1000,
+    'order_id' => 222,
+  ]
+)
+
+$request_body = json_encode($order_detail);
+
 header('Content-Type: application/json');
 
 $charge_result = chargeAPI($api_url, $server_key, $request_body);
