@@ -19,19 +19,20 @@ $api_url = $is_production ?
 //   echo "Page not found or wrong HTTP request method is used"; exit();
 // }
 
-// $request_body = file_get_contents('php://input');
+$request_body = file_get_contents('php://input');
 
-$transaction_details = array(
-    'transaction_details' => array(
-      'gross_amount' => 1000,
-      'order_id' => 222,
-    )
-    
-)
+// $transaction_details = array(
+//     'transaction_details' => array(
+//       'gross_amount' => 400000,
+//       'order_id' => 222,
+//     )
+// );
 
 // $request_body = json_encode($transaction_details);
 
-echo $transaction_details; exit();
+
+// $request_body = json_encode($transaction_details);
+
 
 header('Content-Type: application/json');
 
